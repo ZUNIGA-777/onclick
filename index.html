@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(82, 24, 24);
+            color: white;
+        }
+
+        #nombre, #correo {
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 25px;
+        }
+
+        #btn {
+            border: none;
+            padding: 10px 20px;
+            background-color: rgb(91, 243, 91);
+            border-radius: 10px;
+            box-shadow: rgba(195, 197, 197, 0.333) -1px 1px, rgba(195, 197, 197, 0.333) -2px 2px, rgba(195, 197, 197, 0.333) -3px 3px;
+            animation: botonFlotante 0.8s ease-in-out infinite;
+        }
+
+        @keyframes botonFlotante {
+            0% {transform: translateY(0);}
+            50% {transform: translateY(-5px);}
+            100% {transform: translateY(0);}
+        }
+
+    </style>
+    nombre: <input type="text" placeholder="nombre" id="nombre">
+    correo: <input type="text" placeholder="correo" id="correo">
+    <button onclick="procesarDatos()" id="btn">Enviar</button>
+    <script src="./app.js"></script>
+</body>
+</html>
